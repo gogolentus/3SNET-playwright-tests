@@ -1,0 +1,16 @@
+{
+  "name": "eventswidget-test",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright test for https://dev.3snet.info/eventswidget/",
+  "scripts": {
+    "setup": "npm ci && npm run pw:install", 
+    "pw:install": "playwright install chromium",
+    "test": "playwright test",
+    "test:report:ui": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "typescript": "^5.8.2"
+  }
+}
