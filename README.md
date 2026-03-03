@@ -9,15 +9,23 @@
 
 ## Быстрый запуск
 
-`Установка зависимостей и браузера Chromium`
-    npm run setup
+### Установка зависимостей и браузера Chromium
+```bash
+npm run setup
+```
 
-`Запуск всех тестов Playwright`
-    npm test
+### Запуск всех тестов Playwright
+```bash
+npm test
+```
 
-`Запуск тестов по отдельности` (опционально)
-    npm test -- tests/page-open.spec.ts
-    npm test -- tests/form-size.spec.ts
+### Запуск тестов по отдельности (опционально)
+```bash
+npm test -- tests/page-open.spec.ts
+```
+```bash
+npm test -- tests/form-size.spec.ts
+```
 
 ## Просмотр HTML-отчета
 
@@ -33,13 +41,14 @@
 - автоматически генерируется iframe-код
 
 2. `Генерация iframe-кода`
-2.1 `Минимально допустимые значения`
+   
+    2.1 `Минимально допустимые значения`
 - значения width и height сгенерировались в iframe
 - iframe присутствует в `textarea#code`
 - `src` не пуст и присутствует в `textarea#code`
 - обновление кода подтверждается проверкой итоговых `width/height` в `textarea#code`
 
-2.2 `Максимально допустимые значения`
+    2.2 `Максимально допустимые значения`
 - значения width и height сгенерировались в iframe
 - iframe присутствует в `textarea#code`
 - `src` не пуст и присутствует в `textarea#code`
