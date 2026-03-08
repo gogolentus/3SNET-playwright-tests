@@ -27,6 +27,23 @@ npm test -- tests/page-open.spec.ts
 npm test -- tests/form-size.spec.ts
 ```
 
+## Дополнительное задание: Web UI
+
+Веб-интерфейс для запуска тестов, просмотра результатов и истории
+
+### Установка зависимостей перед запуском Web UI
+```bash
+npm run setup
+```
+
+### Запуск Web UI
+```bash
+npm run ui
+```
+
+### URL
+- `http://localhost:3000/` - веб-интерфейс
+
 ## Просмотр HTML-отчета
 
     npm run test:report:ui
@@ -60,6 +77,9 @@ npm test -- tests/form-size.spec.ts
 - `fixtures` - базовые фикстуры страницы
 - `helpers` - helper-функции для страницы
 - `tests` - smoke и functional тесты
+- `server` - backend для Web UI
+- `public` - frontend для Web UI
+- `data/runs.json` - история запусков
 
 ## Особенности страницы
 

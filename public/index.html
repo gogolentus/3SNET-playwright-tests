@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Playwright Test Runner</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    
+    <style>
+      body { background: #f6f8fb; }
+      .log-box {
+        height: 100px;
+        overflow: auto;
+        background: #0b1020;
+        color: #d8e1ff;
+        border-radius: 0.5rem;
+        padding: 0.75rem;
+        font-family: Consolas, "Courier New", monospace;
+        font-size: 0.875rem;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="container py-4 py-md-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+          <div class="card shadow-sm border-0">
+            <div class="card-body p-4">
+              <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+                <h1 class="h4 mb-0">Playwright Test Runner</h1>
+              </div>
+
+              <ul class="nav nav-tabs mb-3 mt-4" id="runnerTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="run-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#run-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="run-tab-pane"
+                    aria-selected="true"
+                  >
+                    Запуск
+                  </button>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="history-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#history-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="history-tab-pane"
+                    aria-selected="false"
+                  >
+                    История
+                  </button>
+                </li>
+              </ul>
+
+              <div class="tab-content" id="runnerTabsContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="run-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="run-tab"
+                  tabindex="0"
+                >
+                  <div class="d-flex flex-wrap gap-2 mb-3">
+                    <button id="runBtn" class="btn btn-primary">Запустить тесты</button>
+                    <a class="btn btn-outline-secondary" href="/playwright-report/index.html" target="_blank" rel="noreferrer">
+                      Открыть Playwright отчет
+                    </a>
+                  </div>
+
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h2 class="h6 mb-0">Логи</h2>
+                  </div>
+                  <div id="logBox" class="log-box"></div>
+                </div>
+
+                <div
+                  class="tab-pane fade"
+                  id="history-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="history-tab"
+                  tabindex="0"
+                >
+                  <div class="table-responsive">
+                    <table class="table table-sm align-middle mb-0">
+                      <thead>
+                        <tr>
+                          <th>Время</th>
+                          <th>Статус</th>
+                          <th>Длительность (мс)</th>
+                        </tr>
+                      </thead>
+                      <tbody id="historyBody">
+                        <tr>
+                          <td colspan="3" class="text-secondary">Запусков пока нет</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -7,10 +7,14 @@
     "setup": "npm ci && npm run pw:install", 
     "pw:install": "playwright install chromium",
     "test": "playwright test",
-    "test:report:ui": "playwright show-report"
+    "test:report:ui": "playwright show-report",
+    "ui": "node server/app.js"
   },
   "devDependencies": {
     "@playwright/test": "^1.52.0",
     "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
   }
 }
